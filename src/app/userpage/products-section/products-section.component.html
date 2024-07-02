@@ -4,6 +4,8 @@
         <p class="ml-2">Produtos</p>
     </div>
     <div class="flex justify-center items-center">
-        <p class="text-50px">Nossos Produtos Mais Vendidos</p>
+        <p class="text-50px text-center">Nossos Produtos Mais Vendidos</p>
     </div>
+
+    <div *ngFor="let produto of produtos">{{ produto.nome }}</div>
 </section>
