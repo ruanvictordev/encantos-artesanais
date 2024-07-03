@@ -3,6 +3,7 @@ import { HomeSectionComponent } from "./home-section/home-section.component";
 import { ProductsSectionComponent } from "./products-section/products-section.component";
 import { HeaderComponent } from "./header/header.component";
 import { PaymentsSectionComponent } from "./payments-section/payments-section.component";
+import { AboutSectionComponent } from "./about-section/about-section.component";
 
 
 @Component({
@@ -10,7 +11,7 @@ import { PaymentsSectionComponent } from "./payments-section/payments-section.co
     standalone: true,
     templateUrl: './userpage.component.html',
     styleUrl: './userpage.component.css',
-    imports: [HomeSectionComponent, HeaderComponent, ProductsSectionComponent, PaymentsSectionComponent]
+    imports: [HomeSectionComponent, HeaderComponent, ProductsSectionComponent, PaymentsSectionComponent, AboutSectionComponent]
 })
 export class UserpageComponent {
 
