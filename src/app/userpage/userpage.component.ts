@@ -4,6 +4,7 @@ import { ProductsSectionComponent } from "./products-section/products-section.co
 import { HeaderComponent } from "./header/header.component";
 import { PaymentsSectionComponent } from "./payments-section/payments-section.component";
 import { AboutSectionComponent } from "./about-section/about-section.component";
+import { FooterComponent } from "./footer/footer.component";
 
 
 @Component({
@@ -11,7 +12,7 @@ import { AboutSectionComponent } from "./about-section/about-section.component";
     standalone: true,
     templateUrl: './userpage.component.html',
     styleUrl: './userpage.component.css',
-    imports: [HomeSectionComponent, HeaderComponent, ProductsSectionComponent, PaymentsSectionComponent, AboutSectionComponent]
+    imports: [HomeSectionComponent, HeaderComponent, ProductsSectionComponent, PaymentsSectionComponent, AboutSectionComponent, FooterComponent]
 })
 export class UserpageComponent {
 
