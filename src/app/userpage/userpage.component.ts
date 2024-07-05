@@ -15,5 +15,5 @@ import { FooterComponent } from "./footer/footer.component";
     imports: [HomeSectionComponent, HeaderComponent, ProductsSectionComponent, PaymentsSectionComponent, AboutSectionComponent, FooterComponent]
 })
 export class UserpageComponent {
-
+  
 }

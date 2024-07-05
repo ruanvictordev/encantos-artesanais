@@ -7,6 +7,11 @@
             <li><a (click)="scrollTo('payments')" class="cursor-pointer">Pagamentos</a></li>
             <li><a (click)="scrollTo('about')" class="cursor-pointer">Sobre</a></li>
         </ul>
-        <a href="" class="cursor-pointer text-20px"><i class="fa-solid fa-cart-shopping"></i></a>
+        <a class="cursor-pointer text-20px" (click)="showPopup()"><i class="fa-solid fa-cart-shopping"></i></a>
     </nav>
 </header>
+
+<app-cart-popup *ngIf="isPopupVisible" (close)="hidePopup()">
+    <h2 class="text-xl font-bold mb-4">Carrinho</h2>
+    <p>Items do carrinho.</p>
+</app-cart-popup>
