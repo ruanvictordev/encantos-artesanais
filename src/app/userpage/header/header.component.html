@@ -1,7 +1,8 @@
 <header class="fixed w-full top-0 z-50 bg-q-color">
     <nav class="px-10 py-2 flex justify-between items-center max-md:px-5">
         <img class="w-16 max-sm:w-12 max-md:w-14" src="assets/icons/logo.svg" alt="Logo">
-        <ul class="flex justify-center items-center gap-16 text-18px font-bold max-lg:text-xs max-lg:gap-10 max-md:gap-2">
+        <ul
+            class="flex justify-center items-center gap-16 text-18px font-bold max-lg:text-xs max-lg:gap-10 max-md:gap-2">
             <li><a (click)="scrollTo('home')" class="cursor-pointer">Início</a></li>
             <li><a (click)="scrollTo('products')" class="cursor-pointer">Produtos</a></li>
             <li><a (click)="scrollTo('payments')" class="cursor-pointer">Pagamentos</a></li>
@@ -9,20 +10,38 @@
         </ul>
         <a class="cursor-pointer text-20px" (click)="showPopup()"><i class="fa-solid fa-cart-shopping"></i></a>
     </nav>
-</header>   
+</header>
 
 <app-cart-popup *ngIf="isPopupVisible" (close)="hidePopup()">
     <div class="flex justify-between items-center mb-4">
-        <h2 class="text-center text-xl font-bold"><i class="fa-solid fa-cart-shopping text-20px mr-2"></i>Carrinho</h2>
+        <h2 class="text-center text-xl font-bold">
+            <i class="fa-solid fa-cart-shopping text-20px mr-2"></i>Carrinho
+        </h2>
         <button class="text-gray-700 text-35px font-bold hover:text-gray-900" (click)="hidePopup()">X</button>
     </div>
-    
-    <div class="flex justify-between w-full bg-p-color rounded-md p-4 relative">
-        <div class="flex flex-col gap-4">
-            <h1 class="text-35px font-bold">Boneca</h1>
-            <p>35cm - Algodão</p>
-            <p class="font-bold text-30px">R$ 35.00</p>
+
+    <div class="flex flex-col">
+        <div *ngIf="cartItems.length > 0; else emptyCart" class="flex flex-col gap-9">
+            <div *ngFor="let item of cartItems"
+                class="flex justify-between w-full bg-p-color shadow-md rounded-md p-4 relative">
+                <div class="flex flex-col gap-4">
+                    <h1 class="text-35px font-bold">{{ item.nome }}</h1>
+                    <p>{{ item.tamanho }} - {{ item.tecido }}</p>
+                    <p class="font-bold text-30px">R$ {{ item.preco.toFixed(2) }}</p>
+                </div>
+                <img class="right-0 top-0 w-32 absolute" src="{{ item.imagem }}" alt="">
+            </div>
         </div>
-        <img class="right-0 top-0 w-32 absolute" src="assets/images/products/p1.png" alt="">
+        <ng-template #emptyCart>
+            <p class="text-center text-20px">Seu carrinho está vazio!</p>
+        </ng-template>
+    </div>
+
+    <hr class="w-full px-4 my-11 opacity-20">
+
+    <div class="flex flex-col gap-4 mt-4">
+        <button (click)="clearCart()" class="w-full p-4 bg-t-color rounded-md text-center cursor-pointer">Limpar
+            Carrinho</button>
+        <button class="w-full p-4 bg-p-color rounded-md text-center cursor-pointer">Comprar</button>
     </div>
 </app-cart-popup>

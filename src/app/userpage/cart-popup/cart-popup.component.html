@@ -1,5 +1,5 @@
 <div class="fixed inset-0 flex items-center justify-end bg-q-color bg-opacity-50 z-50" (click)="closePopup()">
-    <div class="bg-white p-8 h-full rounded-lg shadow-lg max-w-lg w-full max-lg:w-4/5 bg-q-color" (click)="$event.stopPropagation()">
+    <div class="bg-white p-8 h-full rounded-lg shadow-lg max-w-lg w-full max-lg:w-4/5 overflow-y-auto bg-q-color" (click)="$event.stopPropagation()">
       <ng-content></ng-content>
     </div>
 </div>
