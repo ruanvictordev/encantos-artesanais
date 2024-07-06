@@ -1,7 +1,7 @@
 <header class="fixed w-full top-0 z-50 bg-q-color">
     <nav class="px-10 py-2 flex justify-between items-center max-md:px-5">
-        <img class="w-24 max-sm:w-12 max-md:w-14" src="assets/icons/logo.svg" alt="Logo">
-        <ul class="flex justify-center items-center gap-16 text-18px font-bold max-lg:text-xs max-lg:gap-10 max-md:gap-5">
+        <img class="w-16 max-sm:w-12 max-md:w-14" src="assets/icons/logo.svg" alt="Logo">
+        <ul class="flex justify-center items-center gap-16 text-18px font-bold max-lg:text-xs max-lg:gap-10 max-md:gap-2">
             <li><a (click)="scrollTo('home')" class="cursor-pointer">Início</a></li>
             <li><a (click)="scrollTo('products')" class="cursor-pointer">Produtos</a></li>
             <li><a (click)="scrollTo('payments')" class="cursor-pointer">Pagamentos</a></li>
@@ -12,6 +12,13 @@
 </header>
 
 <app-cart-popup *ngIf="isPopupVisible" (close)="hidePopup()">
-    <h2 class="text-xl font-bold mb-4">Carrinho</h2>
-    <p>Items do carrinho.</p>
+    <h2 class="text-xl font-bold mb-4"><i class="fa-solid fa-cart-shopping text-20px mr-2"></i>Carrinho</h2>
+    <div class="flex justify-between w-full bg-p-color rounded-md p-4 relative">
+        <div class="flex flex-col gap-4">
+            <h1 class="text-35px font-bold">Boneca</h1>
+            <p>35cm - Algodão</p>
+            <p class="font-bold text-30px">R$ 35.00</p>
+        </div>
+        <img class="right-0 top-0 w-32 absolute" src="assets/images/products/p1.png" alt="">
+    </div>
 </app-cart-popup>
