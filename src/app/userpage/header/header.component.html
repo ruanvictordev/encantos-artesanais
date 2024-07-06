@@ -9,10 +9,14 @@
         </ul>
         <a class="cursor-pointer text-20px" (click)="showPopup()"><i class="fa-solid fa-cart-shopping"></i></a>
     </nav>
-</header>
+</header>   
 
 <app-cart-popup *ngIf="isPopupVisible" (close)="hidePopup()">
-    <h2 class="text-xl font-bold mb-4"><i class="fa-solid fa-cart-shopping text-20px mr-2"></i>Carrinho</h2>
+    <div class="flex justify-between items-center mb-4">
+        <h2 class="text-center text-xl font-bold"><i class="fa-solid fa-cart-shopping text-20px mr-2"></i>Carrinho</h2>
+        <button class="text-gray-700 text-35px font-bold hover:text-gray-900" (click)="hidePopup()">X</button>
+    </div>
+    
     <div class="flex justify-between w-full bg-p-color rounded-md p-4 relative">
         <div class="flex flex-col gap-4">
             <h1 class="text-35px font-bold">Boneca</h1>
