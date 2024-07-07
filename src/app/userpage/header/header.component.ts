@@ -37,8 +37,8 @@ export class HeaderComponent implements OnInit{
   }
 
   sendMessage() {
-    const productNames = this.cartService.getProductNames();
-    const message = `Olá, tenho interesse nos produtos: ${productNames.join(', ')} do site. Estão disponíveis?`;
+    const productDetails = this.cartService.getProductDetails();
+    const message = `Olá, tenho interesse nos produtos: ${productDetails.join(', ')} do site. Estão disponíveis?`;
     const whatsappUrl = `https://wa.me/5586998436269?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
   }

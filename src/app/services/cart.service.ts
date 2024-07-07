@@ -23,7 +23,7 @@ export class CartService {
     this.cartItems.next([]);
   }
 
-  getProductNames(): string[] {
-    return this.cartItems.value.map(item => item.nome);
+  getProductDetails(): string[] {
+    return this.cartItems.value.map(item => `${item.nome} - R$ ${item.preco.toFixed(2)}`);
   }
 }
