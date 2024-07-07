@@ -21,4 +21,8 @@ export class CartService {
   clearCart() {
     this.cartItems.next([]);
   }
+
+  getProductNames(): string[] {
+    return this.cartItems.value.map(item => item.nome);
+  }
 }

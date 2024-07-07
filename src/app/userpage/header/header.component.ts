@@ -36,6 +36,13 @@ export class HeaderComponent implements OnInit{
     this.cartService.clearCart();
   }
 
+  sendMessage() {
+    const productNames = this.cartService.getProductNames();
+    const message = `Olá, tenho interesse nos produtos: ${productNames.join(', ')} do site. Estão disponíveis?`;
+    const whatsappUrl = `https://wa.me/5586998436269?text=${encodeURIComponent(message)}`;
+    window.open(whatsappUrl, '_blank');
+  }
+
   ngOnInit() {
     this.cartService.getCartItems().subscribe(items => {
       this.cartItems = items;
