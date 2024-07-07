@@ -12,6 +12,7 @@ export class CartService {
   addToCart(produto: IProduto) {
     const currentItems = this.cartItems.value;
     this.cartItems.next([...currentItems, produto]);
+    alert("Produto adicionado ao carrinho!");
   }
 
   getCartItems() {
