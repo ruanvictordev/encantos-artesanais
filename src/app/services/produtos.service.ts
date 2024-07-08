@@ -9,11 +9,11 @@ export class ProdutosService {
 
   constructor() { }
 
-  getAll() {
+  getAll(): IProduto[] {
     return this.produtos;
   }
 
-  getOne(produtoId: number) {
+  getOne(produtoId: number): IProduto | undefined {
     return this.produtos.find(produto => produto.id === produtoId);
   }
 }

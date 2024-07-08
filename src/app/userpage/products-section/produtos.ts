@@ -18,4 +18,7 @@ export const produtos: IProduto[] = [
     { id: 3, nome: "Bolsa de boneca", tamanho: "30cm", tecido: "Algodão", descricao: "Boneca bonita", preco: 39.00, imagem: "assets/images/products/p3.png" },
     { id: 4, nome: "Bebê boneca", tamanho: "30cm", tecido: "Algodão", descricao: "Boneca bonita", preco: 39.00, imagem: "assets/images/products/p4.png" },
     { id: 5, nome: "Luffy", tamanho: "30cm", tecido: "Algodão", descricao: "Boneca bonita", preco: 39.00, imagem: "assets/images/products/p4.png" },
+    { id: 6, nome: "Luffy", tamanho: "30cm", tecido: "Algodão", descricao: "Boneca bonita", preco: 39.00, imagem: "assets/images/products/p4.png" },
+    { id: 7, nome: "Luffy", tamanho: "30cm", tecido: "Algodão", descricao: "Boneca bonita", preco: 39.00, imagem: "assets/images/products/p4.png" },
+    { id: 8, nome: "Bolsa de boneca", tamanho: "30cm", tecido: "Algodão", descricao: "Boneca bonita", preco: 39.00, imagem: "assets/images/products/p3.png" },
 ]
