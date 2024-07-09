@@ -13,6 +13,13 @@ export class ProdutosService {
     return this.produtos;
   }
 
+  getByCategory(category: string): IProduto[] {
+    if (category === 'Todos') {
+      return this.produtos;
+    }
+    return this.produtos.filter(produto => produto.categoria === category);
+  }
+
   getOne(produtoId: number): IProduto | undefined {
     return this.produtos.find(produto => produto.id === produtoId);
   }

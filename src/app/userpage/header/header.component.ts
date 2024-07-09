@@ -17,6 +17,7 @@ export class HeaderComponent implements OnInit{
   constructor(private scrollService: ScrollService, private cartService: CartService) {}
 
   cartItems: IProduto[] = [];
+  totalPrice: number = 0;
   
   scrollTo(section: string): void {
     this.scrollService.scrollTo(section);
@@ -46,6 +47,7 @@ export class HeaderComponent implements OnInit{
   ngOnInit() {
     this.cartService.getCartItems().subscribe(items => {
       this.cartItems = items;
+      this.totalPrice = this.cartService.getTotalPrice();
     }); 
   }
 }

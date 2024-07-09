@@ -19,6 +19,10 @@ export class CartService {
     return this.cartItems.asObservable();
   }
 
+  getTotalPrice(): number {
+    return this.cartItems.value.reduce((total, item) => total + item.preco, 0);
+  }
+
   clearCart() {
     this.cartItems.next([]);
   }
