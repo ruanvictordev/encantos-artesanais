@@ -38,10 +38,14 @@ export class HeaderComponent implements OnInit{
   }
 
   sendMessage() {
-    const productDetails = this.cartService.getProductDetails();
-    const message = `Olá, tenho interesse nos produtos: ${productDetails.join(', ')} do site. Estão disponíveis?`;
-    const whatsappUrl = `https://wa.me/5586998436269?text=${encodeURIComponent(message)}`;
-    window.open(whatsappUrl, '_blank');
+    if (this.cartItems.length > 0) {
+      const productDetails = this.cartService.getProductDetails();
+      const message = `Olá, tenho interesse nos produtos: ${productDetails.join(', ')} do site. Estão disponíveis?`;
+      const whatsappUrl = `https://wa.me/5586998436269?text=${encodeURIComponent(message)}`;
+      window.open(whatsappUrl, '_blank');
+    } else {
+      alert("Adicione produtos no carrinho!");
+    }
   }
 
   ngOnInit() {
