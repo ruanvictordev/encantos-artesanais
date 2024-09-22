@@ -20,7 +20,11 @@ export class CartService {
   }
 
   getTotalPrice(): number {
-    return this.cartItems.value.reduce((total, item) => total + item.preco, 0);
+    return this.cartItems.value.reduce((total, item) => {
+      // Adiciona o preço de desconto, se existir, ou o preço normal
+      const price = item.precodesconto ? item.precodesconto : item.preco;
+      return total + price;
+    }, 0);
   }
 
   clearCart() {
@@ -28,6 +32,9 @@ export class CartService {
   }
 
   getProductDetails(): string[] {
-    return this.cartItems.value.map(item => `${item.nome} - R$ ${item.preco.toFixed(2)}`);
+    return this.cartItems.value.map(item => {
+      const price = item.precodesconto ? item.precodesconto : item.preco;
+      return `${item.nome} - R$ ${price.toFixed(2)}`;
+    });
   }
 }
