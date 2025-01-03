@@ -19,7 +19,7 @@ export const produtos: IProduto[] = [
     { id: 712, nome: "Boneca", tamanho: "24cm", tecido: "Algodão", categoria: "Bonecas", preco: 40.00, precodesconto: 30.00, imagem: "assets/images/products/boneca24cm40(2).png" },
     { id: 623, nome: "Boneca", tamanho: "36cm", tecido: "Algodão", categoria: "Bonecas", preco: 50.00, imagem: "assets/images/products/boneca36cm50.png" },
     { id: 914, nome: "Boneca", tamanho: "36cm", tecido: "Algodão", categoria: "Bonecas", preco: 50.00, imagem: "assets/images/products/boneca36cm50(2).png" },
-    { id: 733, nome: "Boneca Unicórnio", tamanho: "35cm", tecido: "Feltro", categoria: "Bonecas", preco: 35.00, imagem: "assets/images/products/boneca-unicornio-35cm-35.png" },
+    { id: 733, nome: "Unicórnio", tamanho: "35cm", tecido: "Feltro", categoria: "Bonecas", preco: 35.00, imagem: "assets/images/products/boneca-unicornio-35cm-35.png" },
     { id: 381, nome: "Boneca", tamanho: "46cm", tecido: "Algodão", categoria: "Bonecas", preco: 60.00, imagem: "assets/images/products/boneca46cm60.png" },
     { id: 874, nome: "Boneco Luffy", tamanho: "33cm", tecido: "Feltro", categoria: "Bonecos", preco: 35.00, imagem: "assets/images/products/boneco-luffy-33cm.png" },
     { id: 498, nome: "Chaveirinho", tamanho: "7cm", tecido: "Algodão", categoria: "Chaveiros", preco: 5.00, imagem: "assets/images/products/chaveiro7cm5.png" },
