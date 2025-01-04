@@ -7,7 +7,7 @@
         <p class="text-50px text-center">Nossos Produtos</p>
     </div>
 
-    <div class="flex justify-center gap-4 my-8">
+    <div class="flex flex-wrap justify-center gap-4 my-8">
         <button 
             (click)="filterProducts('Todos')" 
             [ngClass]="{'bg-p-color': selectedCategory === 'Todos'}"
@@ -32,7 +32,14 @@
             class="py-2 px-4 rounded-md">
             Bonecos
         </button>
-    </div>    
+        <button 
+            (click)="filterProducts('Materiais')" 
+            [ngClass]="{'bg-p-color': selectedCategory === 'Materiais'}"
+            class="py-2 px-4 rounded-md">
+            Materiais
+        </button>
+    </div>
+    
 
     <div class="grid grid-cols-2 gap-28 mt-8 max-lg:grid-cols-1 max-md:gap-24">
         <div *ngFor="let produto of displayedProducts"
